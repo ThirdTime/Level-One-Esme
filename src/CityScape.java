@@ -9,7 +9,8 @@ public class CityScape {
 		
 		 rob.moveTo(300, 600); 
 		 drawPointiestBuilding(200, 85, 255 ,30);
-		 drawPointyBuilding(200, 85, 255 ,30);
+		 drawPointyBuilding(200, 130, 200 ,170);
+		 drawFlatBuilding(350,100,40,255);
 		
 	}
 
