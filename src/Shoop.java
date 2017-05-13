@@ -62,20 +62,23 @@ public class Shoop {
 			System.out.println("Your shoop now has an afro!");
 		}
 	}
+	
+	public void instructions() {
+		
+		System.out.println("_________________________");
+		System.out.println("Here's the things you can do to the Shoop!");
+		System.out.println("You can lengthen the tail length of your Shoop with shoop.lengthenTail([number of inches]);");
+		System.out.println("You can change the shape of your Shoop with shoop.trimShoop([new shape]);");
+		System.out.println("You can multiply your Shoop up to four times with shoop.multiply();");
+		System.out.println("You can count how many Shoop you have with shoop.countShoop(); [incomplete]");
+		System.out.println("You can give your Shoop a random haircut with shoop.haircut(); [incomplete]");
+		System.out.println("Have fun!");
+		System.out.println("_________________________");
+	}
 
 	public static void main(String[] args) {
-		Shoop bob = new Shoop(5, "shoop");
-		/* Here's the things you can do to the Shoop!
-		 * You can lengthen the tail length of your Shoop with shoop.lengthenTail([number of inches]);
-		 * You can change the shape of your Shoop with shoop.trimShoop([new shape]);
-		 * You can multiply your Shoop up to four times with shoop.multiply();
-		 * You can count how many Shoop you have with shoop.countShoop(); [incomplete]
-		 * You can give your Shoop a random haircut with shoop.haircut(); [incomplete]
-		 */
-
-		bob.multiply();
-		bob.countShoop();
-		bob.trimShoop("square");
-		bob.haircut();
+		Shoop bob = new Shoop(190, "shoop");
+		
+		
 	}
 }
