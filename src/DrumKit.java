@@ -18,7 +18,10 @@ import javax.swing.JPanel;
 public class DrumKit extends MouseAdapter {
 
 	JLabel drumLabelWithImage;
+	JLabel drumClickedSnare;
+	JLabel drumClickedCymbal;
 	JLabel cymbalImage;
+	JLabel sdimage;
 
 	public static void main(String[] args) throws Exception {
 		new DrumKit().getGoing();
@@ -51,20 +54,27 @@ public class DrumKit extends MouseAdapter {
 		String cymbal = ("cymbal.jpg");
 		cymbalImage = createLabelImage(cymbal);
 		panel.add(cymbalImage);
+		
+		String sd2 = ("snare-drum.jpg");
+		sdimage = createLabelImage(sd2);
+		panel.add(sdimage);
+
 
 		panel.setLayout(new GridLayout());
 		// 12. call the pack() method on the frame
 		frame.pack();
 		// 13. add a mouse listener to drumLabelWithImage.
 		drumLabelWithImage.addMouseListener(this);
+		cymbalImage.addMouseListener(this);
+		sdimage.addMouseListener(this);
 	}
 
 	public void mouseClicked(MouseEvent e) {
 		// 14. When the mouse is clicked, print "mouse clicked"
 		System.out.println("click");
 
-		JLabel drumClickedSnare = (JLabel) e.getSource();
-		JLabel drumClickedCymbal = (JLabel) e.getSource();
+		JLabel drumClicked = (JLabel) e.getSource();
+		if(drumClicked == drumLabelWithImage){
 		// 15. Download a drum sound and drop it into your "default package".
 		// You can find it on freesound.org. To download it, log in as
 		// leagueofamazing/code4life.
@@ -75,6 +85,11 @@ public class DrumKit extends MouseAdapter {
 
 		// 18. Add more images to make a drumkit. Remember to add a mouse
 		// listener to each one.
+		} else if(drumClicked == cymbalImage){
+			playSound("raygun.wav");
+		} else if(drumClicked == sdimage){
+			playSound("randomsynth.wav");
+		}
 	}
 
 	private JLabel createLabelImage(String fileName) throws MalformedURLException {
