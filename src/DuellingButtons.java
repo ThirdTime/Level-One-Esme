@@ -52,7 +52,7 @@ public class DuellingButtons implements ActionListener {
 
 		// If the buttonPressed was the leftButton....
 		if (buttonPressed == leftButton) {
-			rightButton.setText("No,click me!");
+			rightButton.setText("No, click me!");
 			rightButton.setPreferredSize(BIG);
 			leftButton.setText("Click me!");
 			leftButton.setPreferredSize(SMALL);
@@ -60,7 +60,7 @@ public class DuellingButtons implements ActionListener {
 		}
 		
 		if (buttonPressed == rightButton) {
-			leftButton.setText("No,click me!");
+			leftButton.setText("No, click me!");
 			leftButton.setPreferredSize(BIG);
 			rightButton.setText("Click me!");
 			rightButton.setPreferredSize(SMALL);
