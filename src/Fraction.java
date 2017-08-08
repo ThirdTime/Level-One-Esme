@@ -1,7 +1,7 @@
 
 public class Fraction {
 	public int numerator;
-	private int denominator;
+	public int denominator;
 
 	public Fraction(int numerator, int denominator) {
 		this.numerator = numerator;

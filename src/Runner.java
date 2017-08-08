@@ -12,14 +12,13 @@ public class Runner {
 	public Runner(String name, String speed) {
 		this.name = name;
 		this.speed = speed;
-
 		bibNumber = bibNumber + count;
 		count++;
 
 	}
 
-	public static void setCity(String city) {
-		city = city;
+	public static void setCity(String newCity) {
+		city = newCity;
 
 	}
 
@@ -28,8 +27,7 @@ public class Runner {
 	}
 
 	public String toString() {
-		return name + "'s bib number is " + bibNumber + ", their speed is " + speed + " and is running in " + city
-				+ ".";
+		return name + ", bib number " + bibNumber + ", is running in " + city + " at " + startTime + ".";
 	}
 
 }
