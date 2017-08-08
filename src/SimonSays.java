@@ -29,7 +29,7 @@ public class SimonSays extends KeyAdapter {
  		images.put(new Integer(KeyEvent.VK_DOWN), "DownArrow.jpg");
  		images.put(new Integer(KeyEvent.VK_UP), "UpArrow.jpg");
  // 3. Tell the user to "Press the matching key when 'Simon says' otherwise press a different key"
- JOptionPane.showMessageDialog(frame, "Press the matching key when 'Simon says' otherwise press a different key");
+ JOptionPane.showMessageDialog(frame, "Press the matching key when 'Simon says', otherwise press a different key");
  // 4. call the method to show an image
 
  	}

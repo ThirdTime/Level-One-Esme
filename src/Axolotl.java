@@ -49,7 +49,7 @@ public class Axolotl {
 	public void gift() {
 		System.out.println("You've given your axolotl a gift!");
 		if (dead == true) {
-			System.out.println("Why would you give a corpse a present?");
+			System.out.println("It's dead, so it doesn't seem to appreciate it.");
 		} else {
 
 			int num = new Random().nextInt(3) + 1;
@@ -95,6 +95,14 @@ public class Axolotl {
 	public void kill() {
 		dead = true;
 		System.out.println("You're a cold, heartless monster, and have KILLED your axolotl.");
+	}
+	
+	public String toString(){
+		if (hat<=3){
+			return "Your axolotl looks stylish with "+ hat +" hats. It has "+ numFins+ " fins.";
+		}
+			//add different versions for if it's dead and how many hats it has
+		
 	}
 
 	public static void main(String[] args) {
