@@ -6,7 +6,7 @@ public class Axolotl {
 	private boolean dead = false;
 
 	public Axolotl(int numFins) {
-		this.numFins= numFins;
+		this.numFins = numFins;
 		System.out.println("Created axolotl with " + numFins + " fins!");
 	}
 
@@ -65,7 +65,7 @@ public class Axolotl {
 		}
 
 	}
-	
+
 	public void regrowFin() {
 		if (dead == true) {
 			System.out.println("Your axolotl can't regrow it's fin. It's dead.");
@@ -96,13 +96,18 @@ public class Axolotl {
 		dead = true;
 		System.out.println("You're a cold, heartless monster, and have KILLED your axolotl.");
 	}
-	
-	public String toString(){
-		if (hat<=3){
-			return "Your axolotl looks stylish with "+ hat +" hats. It has "+ numFins+ " fins.";
+
+	public String toString() {
+		if (dead == true) {
+			return "Your axolotl is dead. It has " + hat + " hats, and " + numFins + " fins.";
 		}
-			//add different versions for if it's dead and how many hats it has
-		
+		if (hat <= 3) {
+			return "Your axolotl looks stylish with " + hat + " hats. It has " + numFins + " fins.";
+		} else {
+			return "Your axolotl looks silly with " + hat + " hats. It has " + numFins + " fins.";
+		}
+		// add different versions for if it's dead and how many hats it has
+
 	}
 
 	public static void main(String[] args) {
