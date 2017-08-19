@@ -26,6 +26,8 @@ public class SimonSays extends KeyAdapter {
 	Random generator = new Random(3);
 	int randomNumber;
 	Date timeAtStart;
+	
+	
 
 	private void makeAlbum() {
 		// 2. add 4 images which match keyboard keys like this: images.put(new
@@ -60,7 +62,7 @@ public class SimonSays extends KeyAdapter {
 		// 18. if the keyCode doesn't match the imageIndex and "Simon didn't
 		// say..." increase their score
 
-		if (keyCode != imageIndex && randomNumber == 1) {
+		if (keyCode != imageIndex && pressKey()) {
 			totalPoints++;
 			speak("Correct!");
 			tries++;
@@ -72,7 +74,7 @@ public class SimonSays extends KeyAdapter {
 			}
 		}
 
-		if (keyCode == imageIndex && randomNumber == 1) {
+		if (keyCode == imageIndex && pressKey()) {
 
 			speak("Incorrect!");
 			tries++;
@@ -116,13 +118,23 @@ public class SimonSays extends KeyAdapter {
 		// 10. Use the speak method to either say "Simon says press this key" or
 		// "Press this key"
 		// Hint: use the simonSays int and a random number
+		
+		
+		
 		randomNumber = generator.nextInt(3) + 1;
-		if (randomNumber == 1) {
+		if (pressKey()) {
 			speak("Press this Key.");
 		} else {
 			speak("Simon Says Press this Key.");
 		}
 	}
+
+	private boolean pressKey() {
+		return randomNumber == 1;
+	}
+	
+	
+	
 
 	private Component getNextRandomImage() {
 		this.imageIndex = new Random().nextInt(4) + 37;
