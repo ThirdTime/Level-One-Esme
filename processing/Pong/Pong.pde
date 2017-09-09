@@ -1,8 +1,10 @@
   int xPosition = 200;
   int yPosition = 200;
-  int ballSpeedX = 4;
-  int ballSpeedY = 4;
+  int score = 0;
   
+  int ballSpeedX = 4;
+  int ballSpeedY = -4;
+
   import ddf.minim.*; 
   Minim minim;       
   AudioSample sound; 
@@ -17,7 +19,7 @@
 void draw(){
   background(200,169,220);
   
-  ellipse(xPosition, yPosition, 20, 20);
+  ellipse(xPosition, yPosition, 15, 15);
     fill(255,255,255);
     stroke(255,255,255);
     
@@ -36,6 +38,7 @@ void draw(){
      
    if(yPosition>600 && yPosition<610){  
       sound.trigger();
+      println(score);
    }
      
      rect(mouseX, 500, 60, 15);
@@ -43,8 +46,27 @@ void draw(){
    xPosition= xPosition+ballSpeedX;
    yPosition= yPosition+ballSpeedY;
    
+   if(doesBounce() == true){
+    ballSpeedY = -4;
+    score++;
+   }
+
 }
-//boolean intersects still needs more work 
+
+public boolean doesBounce(){
+  if(xPosition >= mouseX && xPosition <= mouseX+60 && yPosition >= 500 && yPosition <= 515 ){
+   return true;
+  } else 
+  {
+    return false;
+  }
+}
+
+
+
+
+
+/*boolean intersects still needs more work 
 boolean intersects(int ballX, int ballY, int paddleX, int paddleY, int paddleLength) {
   if (ballY > paddleY && ballX > paddleX && ballX < paddleX + paddleLength)
   return true;
