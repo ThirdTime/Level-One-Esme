@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,6 +16,7 @@ public class DuellingButtons implements ActionListener {
 
 	JButton leftButton = new JButton();
 	JButton rightButton = new JButton();
+	
 
 	Dimension BIG = new Dimension(400, 400);
 	Dimension SMALL = new Dimension(200, 200);
@@ -45,6 +47,8 @@ public class DuellingButtons implements ActionListener {
 		frame.setTitle("Demanding Buttons");
 
 	}
+
+
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
