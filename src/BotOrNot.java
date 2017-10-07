@@ -9,12 +9,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class BotOrNot implements ActionListener{
 	
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 	JButton okbutton = new JButton();
+	JTextField textField = new JTextField(50);
 		
 	public static void main(String[] args) throws Exception{
 		new BotOrNot().createUI();
@@ -25,6 +27,7 @@ public class BotOrNot implements ActionListener{
 	
 		frame.add(panel);
 		frame.setVisible(true);
+		panel.add(textField);
 		okbutton.setText("OK");
 		okbutton.addActionListener(this);
 		panel.add(okbutton);
