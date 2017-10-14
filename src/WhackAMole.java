@@ -56,7 +56,7 @@ public class WhackAMole implements ActionListener {
 		
 		if (moleCounter == 5){
 			frame.dispose();
-			JOptionPane.showMessageDialog(null, "You've whacked all 5 moles in... seconds!");
+			JOptionPane.showMessageDialog(null, "You've whacked all 5 moles!");
 		}
 		
 	}
