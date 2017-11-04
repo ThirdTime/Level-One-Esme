@@ -1,14 +1,6 @@
 /.DS_Store
 /97359__corsica-s__lets-play-titanic-dreams.wav
-/Axolotl.class
 /BittersweetSong.wav
-/BotOrNot.class
-/Cat.class
-/CityScape.class
-/CoolPicture.class
-/CutenessTV.class
-/Dog.class
-/DogTest.class
 /DownArrow.jpg
 /EightBitPlanet.jpg
 /EightBitSong.mp3
@@ -28,6 +20,14 @@
 /snare-drum.jpg
 /snareDrum.png
 /snareDrum2.png
+/Axolotl.class
+/BotOrNot.class
+/Cat.class
+/CityScape.class
+/CoolPicture.class
+/CutenessTV.class
+/Dog.class
+/DogTest.class
 /DrumKit.class
 /DuellingButtons.class
 /Fish.class
@@ -42,6 +42,7 @@
 /Puppy.class
 /PuppyTest.class
 /RandomTest.class
+/RedBlueButtons.class
 /Runner.class
 /RunnerTest.class
 /Shoop.class
@@ -51,4 +52,4 @@
 /TestClass.class
 /WW3.class
 /WhackAMole.class
-/RedBlueButtons.class
+/BinaryConverter.class
