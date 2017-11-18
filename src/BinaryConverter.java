@@ -25,7 +25,6 @@ public class BinaryConverter implements ActionListener {
 	}
 
 	private void createUI() {
-		//frame.setSize(200, 150);
 		frame.add(panel);
 		panel.add(label);
 		panel.add(textField);
@@ -82,13 +81,13 @@ public class BinaryConverter implements ActionListener {
 			binaryLabel.setText("Your number is " + thirtytwo + sixteen + eight + four + two + one);
 		}
 		
-		/*public void binaryDigit(int userIntputtedNumber, int binaryNumber){
+		public void binaryDigit(int userIntputtedNumber, int binaryNumber){
 			int userInputtedNumber = userNum();
 			int digit = userInputtedNumber / binaryNumber;
 			userInputtedNumber = userInputtedNumber - binaryNumber * digit;
 			//return binaryNumber;
 		}
-		*/
+		
 	}
 
 }
