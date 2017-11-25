@@ -13,15 +13,24 @@ import javax.swing.JTextField;
 
 public class BinaryConverter implements ActionListener {
 	JFrame frame = new JFrame();
-	JPanel panel = new JPanel(new GridLayout (4,1));
+	JPanel panel = new JPanel(new GridLayout(4, 1));
 	JButton button = new JButton();
 	JTextField textField = new JTextField(10);
 	JLabel label = new JLabel("Enter a number from 0 to 63.");
 	JLabel binaryLabel = new JLabel();
 	String userNum;
 
+	/*public int binaryDigit(int userIntputtedNumber, int binaryNumber) {
+		int userInputtedNumber = Integer.parseInt(textField.getText());
+		int digit = userInputtedNumber / binaryNumber;
+		userInputtedNumber = userInputtedNumber - binaryNumber * digit;
+		return userInputtedNumber;
+	}
+	*/
+
 	public static void main(String[] args) {
 		new BinaryConverter().createUI();
+		
 	}
 
 	private void createUI() {
@@ -52,10 +61,10 @@ public class BinaryConverter implements ActionListener {
 		} else if (num < 0) {
 			binaryLabel.setText("This number is too small.");
 		} else {
-			
+
 			int thirtytwosDigit = num / 32;
 			num = num - 32 * thirtytwosDigit;
-			
+
 			int sixteensDigit = num / 16;
 			num = num - 16 * sixteensDigit;
 
@@ -80,14 +89,6 @@ public class BinaryConverter implements ActionListener {
 
 			binaryLabel.setText("Your number is " + thirtytwo + sixteen + eight + four + two + one);
 		}
-		
-		public void binaryDigit(int userIntputtedNumber, int binaryNumber){
-			int userInputtedNumber = userNum();
-			int digit = userInputtedNumber / binaryNumber;
-			userInputtedNumber = userInputtedNumber - binaryNumber * digit;
-			//return binaryNumber;
-		}
-		
-	}
 
+	}
 }
