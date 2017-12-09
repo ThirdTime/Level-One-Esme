@@ -38,7 +38,9 @@
 /HW3.class
 /HW3test.class
 /JWarmup.class
+/KeyListenerTestPractice.class
 /LandOfTurtles.class
+/MouseListenerTestPractice.class
 /PhotoQuiz.class
 /PrefixPostfixWorksheet.class
 /Puppy.class
@@ -54,5 +56,6 @@
 /TestClass.class
 /WW3.class
 /WhackAMole.class
-/KeyListenerTestPractice.class
-/MouseListenerTestPractice.class
+/WolfPractice.class
+/Wolf.class
+/KeyKnowledge.class
